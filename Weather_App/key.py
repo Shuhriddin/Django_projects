@@ -1,1 +1,5 @@
-api_key = "10cc3c22949c905ef8982ff52458d2c0"
+from environs import Env
+
+env = Env()
+env.read_env()
+api_key = env.str("API_KEY")
