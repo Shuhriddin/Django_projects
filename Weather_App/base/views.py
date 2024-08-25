@@ -1,11 +1,12 @@
 from django.shortcuts import render
 import requests
-from key import api_key
+
 
 # Create your views here.
 
 def get_weather(city):
     base_url = "https://api.openweathermap.org/data/2.5/weather"
+    api_key = "10cc3c22949c905ef8982ff52458d2c0"
     parameters = {
         'q': city,
         'appid': api_key,
