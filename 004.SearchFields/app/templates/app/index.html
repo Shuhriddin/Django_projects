@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr class="table-info">
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+            <tr class="table-primary">
+                <td class="table-secondary">{{ data.first_name }}</td>
+                <td class="table-warning">{{ data.last_name }}</td>
+                <td class="table-success">{{ data.age }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
